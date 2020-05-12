@@ -1,12 +1,23 @@
 package com.example.sockert.Model;
 
-import java.sql.Date;
+import lombok.Data;
+
+import javax.persistence.*;
 import java.time.LocalTime;
 
+@Entity
+@Table
+@Data
 public class ChatMessage {
 
+    @Id
+    @GeneratedValue
+    private Long id;
+    @Column
     private String content;
+    @Column
     private String sender;
+    @Column
     private LocalTime time;
 
     public String getContent() {
