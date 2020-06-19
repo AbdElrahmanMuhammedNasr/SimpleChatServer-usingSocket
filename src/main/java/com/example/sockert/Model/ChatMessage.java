@@ -17,6 +17,8 @@ public class ChatMessage {
     private String content;
     @Column
     private String sender;
+//    @Column
+//    private String recever;
     @Column
     private LocalTime time;
 
